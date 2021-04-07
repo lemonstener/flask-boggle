@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle</title>
+    <link rel="stylesheet" href="/static/app.css">
+
+</head>
+
+<body>
+
+    <section>
+        <table>
+            <tbody>
+                {% for row in board %}
+                <tr>
+                    {% for letter in row %}
+                    <td><b>{{letter}}</b></td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <div class="center-view">
+            <p><b>Highscore: {{highscore}}</b></p>
+            <p><b>Games played: {{played}}</b></p>
+            <p><b>Current Score: <span id="current">0</span></b></p>
+            <p><b>Time: <span id="time"></span></b></p>
+        </div>
+    </section>
+
+    <section>
+        <div class="center-view">
+            <form method="POST">
+                <input type="text" name="word" placeholder="Enter a word">
+                <button>BOGGLE!</button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="center-view" id="feedback"></div>
+    </section>
+
+    <section>
+        <div id="correct-words" class="center-view"></div>
+    </section>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

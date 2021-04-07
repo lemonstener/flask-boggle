@@ -1,0 +1,42 @@
+table {
+    background-color: gray;
+    margin: 0 auto;
+}
+
+table td {
+    background-color: white;
+    border: 1px solid blue;
+    font-size: 1.5em;
+    padding: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.center-view {
+    font-size: 1.2em;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    margin-top: 5px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+#correct-words {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.displayed-word {
+    margin: 5px;
+}
